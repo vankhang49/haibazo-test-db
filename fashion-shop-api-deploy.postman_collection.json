@@ -1,24 +1,25 @@
 {
 	"info": {
-		"_postman_id": "60eacbc9-0ddf-4dad-8bfb-26fabb5900b5",
-		"name": "fashion-shop-api",
+		"_postman_id": "d1f41b98-e1f2-4e0a-8ec7-f934a42d65f9",
+		"name": "fashion-shop-api-deploy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33869490",
-		"_collection_link": "https://module6.postman.co/workspace/b4a75f41-f362-4f25-856f-bb0e43584c6b/collection/33869490-60eacbc9-0ddf-4dad-8bfb-26fabb5900b5?action=share&source=collection_link&creator=33869490"
+		"_collection_link": "https://module6.postman.co/workspace/b4a75f41-f362-4f25-856f-bb0e43584c6b/collection/33869490-d1f41b98-e1f2-4e0a-8ec7-f934a42d65f9?action=share&source=collection_link&creator=33869490"
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&priceBefore=&priceAfter=&nameSort=&sortDirection=",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&priceBefore=&priceAfter=&nameSort=&sortDirection=",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -66,23 +67,23 @@
 							"value": ""
 						}
 					]
-				},
-				"description": "Calling API gets a list of products in Slice format, adds filtering by fields and sorting by price and date added.  \n_Slice: pageSize default 12  \n_Filter: nameSearch(productName), categoryName, styleName, colorName, size, price between(defaul 0 to 9999999999)  \n_Sort by:  \n\\+ sortName: price, dateCreate  \n\\+ sortDirection: asc, desc"
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products/17",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/17",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/products/17",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products/17",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -95,7 +96,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -109,12 +110,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/public/products",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -126,7 +128,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products",
 			"request": {
 				"method": "PUT",
 				"header": [],
@@ -140,12 +142,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/public/products",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -157,17 +160,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products/18/soft-delete",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/soft-delete",
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/products/18/soft-delete",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/soft-delete",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -181,17 +185,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products/18/restore",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/restore",
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/products/18/restore",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/restore",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -200,22 +205,23 @@
 						"restore"
 					]
 				},
-				"description": "Api call to restore product from deleted list"
+				"description": "Api call to restore product from deleted list\r\n\r\n\r\n"
 			},
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/products/18",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/restore",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/products/18",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/products/18",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -228,17 +234,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/pricing/35/soft-delete",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/restore",
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/pricing/35/soft-delete",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35/soft-delete",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -252,17 +259,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/pricing/35/restore",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products/18/restore",
 			"request": {
 				"method": "PATCH",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/pricing/35/restore",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35/restore",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -276,17 +284,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/pricing/35",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
 			"request": {
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/pricing/35",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -299,17 +308,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/categories",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/categories",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/categories",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -321,17 +331,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/styles",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/styles",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/styles",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -343,17 +354,18 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:8080/api/public/colors",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
 			"request": {
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/public/colors",
-					"protocol": "http",
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/colors",
+					"protocol": "https",
 					"host": [
-						"localhost"
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
 					],
-					"port": "8080",
 					"path": [
 						"api",
 						"public",
@@ -361,28 +373,6 @@
 					]
 				},
 				"description": "Api call to get list of colors"
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:8080/api/public/promotions",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/api/public/promotions",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"public",
-						"promotions"
-					]
-				},
-				"description": "Api call to get list of promotions"
 			},
 			"response": []
 		}
