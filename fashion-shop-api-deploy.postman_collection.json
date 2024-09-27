@@ -4,11 +4,11 @@
 		"name": "fashion-shop-api-deploy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "33869490",
-		"_collection_link": "https://module6.postman.co/workspace/b4a75f41-f362-4f25-856f-bb0e43584c6b/collection/33869490-d1f41b98-e1f2-4e0a-8ec7-f934a42d65f9?action=share&source=collection_link&creator=33869490"
+		"_collection_link": "https://module6.postman.co/workspace/module6-Workspace~b4a75f41-f362-4f25-856f-bb0e43584c6b/collection/33869490-d1f41b98-e1f2-4e0a-8ec7-f934a42d65f9?action=share&source=collection_link&creator=33869490"
 	},
 	"item": [
 		{
-			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&priceBefore=&priceAfter=&nameSort=&sortDirection=",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -373,6 +373,29 @@
 					]
 				},
 				"description": "Api call to get list of colors"
+			},
+			"response": []
+		},
+		{
+			"name": "https://fashion-shop-haibazo.onrender.com/api/public/pricing/35",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://fashion-shop-haibazo.onrender.com/api/public/promotions",
+					"protocol": "https",
+					"host": [
+						"fashion-shop-haibazo",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"public",
+						"promotions"
+					]
+				},
+				"description": "Api call to get list of promotions"
 			},
 			"response": []
 		}

@@ -8,7 +8,7 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
+			"name": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&priceBefore=&priceAfter=&nameSort=&sortDirection=",
 			"request": {
 				"method": "GET",
 				"header": [],
