@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "60eacbc9-0ddf-4dad-8bfb-26fabb5900b5",
+		"name": "fashion-shop-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33869490",
+		"_collection_link": "https://module6.postman.co/workspace/b4a75f41-f362-4f25-856f-bb0e43584c6b/collection/33869490-60eacbc9-0ddf-4dad-8bfb-26fabb5900b5?action=share&source=collection_link&creator=33869490"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/products?pageSize=&nameSearch=&categoryName=&styleName=&colorName=&size=&nameSort=price&sortDirection=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": ""
+						},
+						{
+							"key": "nameSearch",
+							"value": ""
+						},
+						{
+							"key": "categoryName",
+							"value": ""
+						},
+						{
+							"key": "styleName",
+							"value": ""
+						},
+						{
+							"key": "colorName",
+							"value": ""
+						},
+						{
+							"key": "size",
+							"value": ""
+						},
+						{
+							"key": "nameSort",
+							"value": "price"
+						},
+						{
+							"key": "sortDirection",
+							"value": ""
+						}
+					]
+				},
+				"description": "Calling API gets a list of products in Slice format, adds filtering by fields and sorting by price and date added.  \n_Slice: pageSize default 12  \n_Filter: nameSearch(productName), categoryName, styleName, colorName, size, price between(defaul 0 to 9999999999)  \n_Sort by:  \n\\+ sortName: price, dateCreate  \n\\+ sortDirection: asc, desc"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products/17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/products/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products",
+						"17"
+					]
+				},
+				"description": "Api call to get product by productId"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"productName\": \"Kids’ Explorer Mid Waterproof Hiking Boot\",\r\n        \"dateCreate\": \"2024-09-27\",\r\n        \"description\": \"Made in America\",\r\n        \"category\": {\r\n            \"categoryId\": 4,\r\n            \"categoryName\": \"Outdoor\"\r\n        },\r\n        \"style\": {\r\n            \"styleId\": 1,\r\n            \"styleName\": \"Modern\"\r\n        },\r\n        \"pricingList\": [\r\n           {\r\n                \"pricingName\": \"Kids’ Explorer Mid Waterproof Hiking Boot\",\r\n                \"price\": 100.0,\r\n                \"size\": {\r\n                    \"sizeId\": 4,\r\n                    \"sizeName\": \"XL\"\r\n                },\r\n                \"quantity\": 100,\r\n                \"color\": {\r\n                    \"colorId\": 9,\r\n                    \"colorName\": \"Black\"\r\n                },\r\n                \"pricingImgUrl\": \"https://fireasestorage.googleapis.com/v0//imageuploadd-4f4f5.appspot.com/o/multipleImages%2Flazer4.jfif?alt=media&token=36c42290-9556-4999-7d3-0e4449296518\",\r\n                \"promotion\": {\r\n                    \"promotionId\": 1,\r\n                    \"promotionName\": \"No discount\",\r\n                    \"discount\": 0\r\n                },\r\n                \"enabled\": true\r\n            }\r\n        ],\r\n        \"productImages\": [{\r\n            \"imageUrl\": \"https://fireasestorage.googleapis.com/v0//imageuploadd-4f4f5.appspot.com/o/multipleImages%2Flazer4.jfif?alt=media&token=36c42290-9556-4999-7d3-0e4449296518\" \r\n        }],\r\n        \"enabled\": true\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/public/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products"
+					]
+				},
+				"description": "Api call to save new product along with its detailed products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\": 17,\r\n    \"productCode\": \"P-00012\",\r\n    \"productName\": \"Lacoste Women'Soft Cotton Petit Piqué Polo Shirt\",\r\n    \"dateCreate\": \"2024-09-27\",\r\n    \"description\": \"Made in America\",\r\n    \"category\": {\r\n        \"categoryId\": 2,\r\n        \"categoryName\": \"Clothing\"\r\n    },\r\n    \"style\": {\r\n        \"styleId\": 6,\r\n        \"styleName\": \"Vintage\"\r\n    },\r\n    \"pricingList\": [\r\n        {\r\n                \"pricingName\": \"Lacoste Women'Soft Cotton Petit Piqué Polo Shirt\",\r\n                \"price\": 170.0,\r\n                \"size\": {\r\n                    \"sizeId\": 2,\r\n                    \"sizeName\": \"M\"\r\n                },\r\n                \"quantity\": 100,\r\n                \"color\": {\r\n                    \"colorId\": 1,\r\n                    \"colorName\": \"Red\"\r\n                },\r\n                \"pricingImgUrl\": \"https://fireasestorage.googleapis.com/v0//imageuploadd-4f4f5.appspot.com/o/multipleImages%2Flazer4.jfif?alt=media&token=36c42290-9556-4999-7d3-0e4449296518\",\r\n                \"promotion\": {\r\n                    \"promotionId\": 1,\r\n                    \"promotionName\": \"No discount\",\r\n                    \"discount\": 0\r\n                },\r\n                \"enabled\": true\r\n            },\r\n            {\r\n                \"pricingName\": \"Lacoste Women'Soft Cotton Petit Piqué Polo Shirt\",\r\n                \"price\": 170.0,\r\n                \"size\": {\r\n                    \"sizeId\": 1,\r\n                    \"sizeName\": \"S\"\r\n                },\r\n                \"quantity\": 100,\r\n                \"color\": {\r\n                    \"colorId\": 9,\r\n                    \"colorName\": \"Black\"\r\n                },\r\n                \"pricingImgUrl\": \"https://fireasestorage.googleapis.com/v0//imageuploadd-4f4f5.appspot.com/o/multipleImages%2Flazer4.jfif?alt=media&token=36c42290-9556-4999-7d3-0e4449296518\",\r\n                 \"promotion\": {\r\n                    \"promotionId\": 1,\r\n                    \"promotionName\": \"No discount\",\r\n                    \"discount\": 0\r\n                },\r\n                \"enabled\": true\r\n            }\r\n    ],\r\n    \"productImages\": [\r\n        {\r\n            \"imageId\": 13,\r\n            \"imageUrl\": \"https://fireasestorage.googleapis.com/v0//imageuploadd-4f4f5.appspot.com/o/multipleImages%2Flazer4.jfif?alt=media&token=36c42290-9556-4999-7d3-0e4449296518\"\r\n        }\r\n    ],\r\n    \"enabled\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/public/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products"
+					]
+				},
+				"description": "Api call to update new product along with its detailed products"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products/18/soft-delete",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/products/18/soft-delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products",
+						"18",
+						"soft-delete"
+					]
+				},
+				"description": "The Api call to put the product in the list is removed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products/18/restore",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/products/18/restore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products",
+						"18",
+						"restore"
+					]
+				},
+				"description": "Api call to restore product from deleted list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/products/18",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/products/18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"products",
+						"18"
+					]
+				},
+				"description": "Api call to completely remove the product from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/pricing/35/soft-delete",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/pricing/35/soft-delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"pricing",
+						"35",
+						"soft-delete"
+					]
+				},
+				"description": "The Api call to put the pricing in the list is removed"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/pricing/35/restore",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/pricing/35/restore",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"pricing",
+						"35",
+						"restore"
+					]
+				},
+				"description": "Api call to restore pricing from deleted list"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/pricing/35",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/pricing/35",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"pricing",
+						"35"
+					]
+				},
+				"description": "Api call to completely remove the pricing from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"categories"
+					]
+				},
+				"description": "Api call to get list of categories"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/styles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/styles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"styles"
+					]
+				},
+				"description": "Api call to get list of styles"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/colors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/colors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"colors"
+					]
+				},
+				"description": "Api call to get list of colors"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/public/promotions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/public/promotions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"public",
+						"promotions"
+					]
+				},
+				"description": "Api call to get list of promotions"
+			},
+			"response": []
+		}
+	]
+}
